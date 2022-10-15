@@ -1,0 +1,308 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <style type="text/css">
+      /* global */
+      .screen_out {
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        text-indent: -9999px;
+      }
+      .show {
+        display: block;
+      }
+      .hide {
+        display: none;
+      }
+
+      /* PC Social Share */
+      /* 2018-04-25 수정 시작 */
+      .social_comm_p {
+        position: absolute;
+        z-index: 1000;
+      }
+      .social_comm_p .img_social {
+        display: block;
+        overflow: hidden;
+        font-size: 0;
+        background: url(//t1.daumcdn.net/daumtop_deco/images/common/social/img_social_200414.png) no-repeat 0 0;
+        text-indent: -9999px;
+      }
+      .social_comm_p .sns_comm_p {
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #e2e2e2;
+        font-size: 11px;
+        color: #222;
+        background-color: #fff;
+        letter-spacing: -0.025em;
+      }
+      .social_comm_p .btn_close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 24px;
+        height: 24px;
+      }
+      .social_comm_p .ico_close {
+        width: 15px;
+        height: 16px;
+        margin: 5px;
+        background-position: -150px 0;
+      }
+      .social_comm_p .share_layer {
+        position: relative;
+        width: 260px;
+        min-height: 228px;
+      }
+      .social_comm_p .list_sns {
+        overflow: hidden;
+        margin: 26px 14px 0;
+      }
+      .social_comm_p .list_sns li {
+        float: left;
+        width: 77px;
+        height: 78px;
+      }
+      .social_comm_p .list_sns .link_sns {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+      }
+      .social_comm_p .list_sns .link_sns .img_social {
+        width: 43px;
+        height: 43px;
+        margin: 0 auto 4px;
+      }
+      .social_comm_p .list_sns .tit_sns {
+        display: block;
+        margin-top: 7px;
+        font-weight: normal;
+        line-height: 16px;
+      }
+      .social_comm_p .list_sns .ico_sns_ks {
+        background-position: -50px 0;
+      }
+      .social_comm_p .list_sns .ico_sns_fb {
+        background-position: -100px 0;
+      }
+      .social_comm_p .list_sns .ico_sns_tw {
+        background-position: 0 -50px;
+      }
+      .social_comm_p .list_sns .ico_sns_cafe {
+        background-position: -100px -50px;
+      }
+      .social_comm_p .list_sns .ico_sns_mail {
+        background-position: -50px -50px;
+      }
+      .social_comm_p .list_sns .ico_sns_kt {
+        background-position: 0 0;
+      }
+      .social_comm_p .sns_copyurl {
+        margin: -1px 26px 0;
+        padding-bottom: 23px;
+      }
+      .social_comm_p .sns_copyurl .link_copyurl {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        height: 23px;
+        line-height: 23px;
+        border: 1px solid #d0d0d0;
+        background-color: #f8f8f8;
+        text-decoration: none;
+      }
+      .social_comm_p .sns_copyurl .txt_url {
+        display: block;
+        overflow: hidden;
+        padding: 0 64px 0 7px;
+        color: #2695f8;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .social_comm_p .sns_copyurl .txt_copy {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 47px;
+        height: 25px;
+        border-left: 1px solid #d0d0d0;
+        background-color: #fff;
+        text-align: center;
+      }
+      .social_comm_p .copyurl_layer {
+        width: 254px;
+        height: 78px;
+        text-align: center;
+      }
+      .social_comm_p .inner_copyurl {
+        display: table;
+        width: 100%;
+        height: 100%;
+      }
+      .social_comm_p .inner_copyurl .desc_copyurl {
+        display: table-cell;
+        padding: 18px 0 17px;
+        line-height: 19px;
+        vertical-align: middle;
+      }
+      .social_comm_p .sns_copyurl_type2 .tf_url {
+        display: block;
+        width: 210px;
+        height: 25px;
+        padding: 0 10px;
+        border: 0 none;
+        color: #2695f8;
+        background-color: transparent;
+      }
+      .social_comm_p .sns_copyurl_type2 .desc_tip {
+        padding: 13px 0;
+        line-height: 18px;
+        color: #888;
+        text-align: center;
+        letter-spacing: 0;
+      }
+
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 144dpi),
+        only screen and (min-resolution: 1.5dppx) {
+        .social_comm_p .img_social {
+          background-image: url(//t1.daumcdn.net/daumtop_deco/images/common/social/rtn/img_social_200414.png);
+          background-size: 170px 100px;
+        }
+      }
+    </style>
+    <title>카카오 서비스 장애 현황에 대해 사과와 안내 말씀 드립니다.</title>
+    <link rel="stylesheet" href="https://t1.daumcdn.net/liveboard/f/tbg5XUjKRGvM5QuIgJVZi/_next/static/css/listicle.css" class="next-head" />
+    <style type="text/css">
+      iframe.movie-embedded-post {
+        display: block;
+        border: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    </style>
+    <style type="text/css">
+      iframe.movie-embedded-post {
+        display: block;
+        border: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body class="pc mac simpleview">
+    <div id="__next">
+      <div id="daumIndex"><a href="#daumBody">본문 바로가기</a><a href="#daumGnb">메뉴 바로가기</a></div>
+      <div id="daumWrap" class="listicleview daum_1boon header_fixed">
+        <div id="wrapMinidaum" class="hide"><div id="minidaum"></div></div>
+        <main id="daumContent" class="cont_view">
+          <div id="mFeature" class="menu_side" data-tiara-layer="c_sidemenu">
+            <div class="inner_side">
+              <h2 class="screen_out">1boon 메뉴</h2>
+              <nav class="menu_list">
+                <ul class="list_menu">
+                  <li><a href="/" data-tiara-layer="c_home">1boon 홈</a></li>
+                  <li><a href="/p/popular" data-tiara-layer="c_shares">실시간 인기</a></li>
+                  <li><a href="/p/view" data-tiara-layer="c_views">많이 본</a></li>
+                </ul>
+              </nav>
+              <div class="menu_partner" data-tiara-layer="c_partner">
+                <h3 class="tit_side">추천 파트너</h3>
+                <ul class="list_partner"></ul>
+                <a href="/p/partner" class="more_partner"
+                  ><span class="inner_more"
+                    ><span class="ico_more"><span class="img_1boon">파트너</span></span
+                    >더보기</span
+                  ></a
+                >
+              </div>
+              <button type="button" class="btn_close sidebarclose">
+                <span class="img_1boon">1boon 메뉴닫기</span>
+              </button>
+            </div>
+          </div>
+          <article id="mArticle">
+            <h2 id="daumBody" class="screen_out">뷰 본문</h2>
+            <div class="headline_group type_default" data-tiara-layer="c_viewcover">
+              <div class="inner_headline">
+                <h3 class="tit_headline">카카오 서비스 장애 현황에 대해 사과와 안내 말씀 드립니다.</h3>
+                <p class="desc_info"></p>
+                <div class="useutil_btn">
+                  <a href="#comment" class="link_comment hide" data-tiara-layer="c_cmt_btn"></a>
+                  <div class="lang_view"></div>
+                </div>
+              </div>
+              <span class="line_head"></span>
+            </div>
+            <div class="component_group" data-tiara-layer="c_viewcontents">
+              <div id="mainArticles">
+                <div class="compos_section editor_view" data-compo="html">
+                  <p>
+                    안녕하세요, 카카오 각자대표 남궁훈, 홍은택 입니다. <br /><br />
+
+                    오늘 발생한 데이터센터 화재로 인해 카카오톡을 비롯한 다음, 카카오 T, 카카오페이 등 카카오 서비스 장애로 불편을 겪고 계신 모든 이용자분들께 고개 숙여 진심으로 사과드립니다. <br /><br />
+
+                    카카오는 현재 최대한 빠르게 서비스를 정상화하기 위해 노력하고 있으며, 이번 사건의 원인을 철저히 규명하고 재발 방지를 위해 할수 있는 최대한의 조치를 취할 것을 약속드립니다. <br /><br />
+
+                    먼저 이번 장애의 원인에 대해 말씀드리겠습니다.<br />
+                    10/15 오후 3시 30분경, 카카오가 입주해 있는 SK C&C 판교 데이터센터에 화재가 발생했습니다. <br />
+                    해당 화재로 인해 카카오의 장비가 위치해 있는 구역에 전원 공급이 차단되었고, 그로 인한 서비스 장애가 일어났습니다.<br />
+                    소방 당국의 신속한 조치로 현재 화재 진압은 완료되었으나, 안전상의
+                    이유로 데이터센터에 즉시 전원을 공급하기 어려워 장애 해결이 지연되고 있는 상황입니다. <br /><br />
+
+                    카카오는 이를 인지한 즉시 다른 데이터센터를 이용해 서비스를 정상화하기 위한 최선의 조치를 취하고 있습니다. <br />
+                    카카오는 모든 데이터를 국내 여러 데이터센터에 분할 백업하고 있으며, 외부 상황에 따른 장애 대응을 위한 이원화 시스템을 가지고 있습니다.  <br />
+                    이번 화재가 발생한 직후, 카카오는 해당 사실을 인지하고 즉시 이원화 조치 적용을 시작했습니다. <br />
+                    다만 이번과 같이 데이터센터 한 곳 전체가 영향을 받는 것은 이례적인 상황으로, 해당 조치를 적용하는데 예상보다 오랜 시간이 소요되고 있습니다. <br /><br />
+
+                    카카오는 이번 화재의 원인을 명확히 규명하고, 현재 입주해 있는 데이터센터 업체에 사고 원인을 전달해 안전 점검 및 사고 예방 조치를 다시 한번 확인할 예정입니다. <br />
+                    아울러 향후 이러한 사건이 발생하더라도, 그에 따른 불편을 최소화하고 빠르게 서비스를 평소와 같이 이용하실 수 있도록 다양한 기술적 재발 방지책을
+                    강화하겠습니다.<br /><br />
+
+                    다시 한 번 복구가 늦어지고 있는 점 사과드리며, 최대한 빨리 서비스를 정상적으로 이용하실 수 있도록 최선을 다하겠습니다.<br /><br />
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="translate_layer" id="LayerTranslateLoading">
+              <div class="inner_translate_layer">
+                <div class="layer_body">
+                  <strong class="tit_translate">번역중 <span class="eng_tit">Now in translation</span></strong>
+                </div>
+              </div>
+            </div>
+            <div class="translate_layer" id="LayerTranslateError">
+              <div class="inner_translate_layer inner_error_layer">
+                <div class="layer_body">
+                  <span class="ico_newsview ico_error"></span
+                  ><strong class="tit_translate">잠시 후 다시 시도해 주세요 <span class="eng_tit">Please try again in a moment</span></strong>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </div>
+      <footer id="daumFoot" style="display: none">
+        <div class="d_foot #c_footer">
+          <div class="inner_foot">
+            <h2 class="screen_out">서비스 이용정보</h2>
+            <div class="footer_link">
+              <a href="https://business.kakao.com/" class="link_info">광고안내</a><span class="ico_dot"></span
+              ><a href="https://with.kakao.com/media" class="link_info">제휴문의</a><span class="ico_dot"></span
+              ><a href="https://www.kakao.com/helps?service=68" class="link_info">고객센터</a><span class="ico_dot"></span
+              ><small class="info_copyright"><a href="https://kakaocorp.com" class="link_daumcorp">© Kakao Corp.</a></small>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
